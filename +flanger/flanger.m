@@ -1,6 +1,6 @@
 function flanger( fileName )
 
-	source = raffa.source( fileName );
+	source = flanger.source( fileName );
 	frameSize = source.SamplesPerFrame;
 
 	Dmax = 0;
@@ -39,7 +39,7 @@ function flanger( fileName )
 	   end
 	end
 
-	raffa.dspUiHelper( source, filterParam, @updateFilter, @filterStep )
+	flanger.dspUiHelper( source, filterParam, @updateFilter, @filterStep )
 
 end
 

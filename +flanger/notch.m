@@ -1,6 +1,6 @@
 function notch( fileName )
 
-	source = raffa.source( fileName );
+	source = flanger.source( fileName );
 
 	Kind = 1;
 	filterParam( 1 ).Name = 'Kind';
@@ -54,7 +54,7 @@ function notch( fileName )
 		[ audioOut, status ] = filter( b, a, audioIn, status );
 	end
 
-	raffa.dspUiHelper( source, filterParam, @updateFilter, @filterStep )
+	flanger.dspUiHelper( source, filterParam, @updateFilter, @filterStep )
 
 	close( fig );
 end
